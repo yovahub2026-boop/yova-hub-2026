@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>إدارة المواقع | لوحة التحكم</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+</head>
+
+<body class="admin-body">
+
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <a href="index.html" class="logo">Yova-Hub</a>
+            <nav class="admin-nav" id="adminNav">
+                <a href="index.html">الرئيسية (Dashboard)</a>
+                <a href="websites.html" class="active">إدارة المواقع</a>
+                <a href="categories.html">إدارة التصنيفات</a>
+                <a href="orders.html">إدارة الطلبات</a>
+                <a href="messages.html">إدارة الرسائل</a>
+                <a href="settings.html">الإعدادات</a>
+                <a href="#" class="logout-btn" id="logoutBtn">تسجيل الخروج</a>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <div class="admin-header">
+                <h1>إدارة المواقع</h1>
+                <button class="btn btn-primary" id="addWebsiteBtn">+ إضافة موقع جديد</button>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>اسم الموقع</th>
+                            <th>التصنيف</th>
+                            <th>الحالة</th>
+                            <th>إجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="websitesTable">
+                        <tr>
+                            <td colspan="4" style="text-align:center;">جاري التحميل...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal إضافة / تعديل موقع -->
+    <div class="modal admin-modal" id="websiteModal" hidden>
+        <div class="modal-overlay" id="websiteModalOverlay"></div>
+        <div class="modal-content">
+            <button type="button" class="modal-close" id="closeWebsiteModal">×</button>
+            <h2 id="websiteModalTitle">إضافة موقع جديد</h2>
+
+            <form id="websiteForm" class="form">
+                <input type="hidden" id="websiteId" />
+
+                <div class="form-group">
+                    <label for="siteName">اسم الموقع *</label>
+                    <input type="text" id="siteName" required maxlength="100" />
+                </div>
+
+                <div class="form-group">
+                    <label for="siteCategory">التصنيف *</label>
+                    <select id="siteCategory" required>
+                        <option value="">اختر التصنيف</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="siteDesc">الوصف *</label>
+                    <textarea id="siteDesc" rows="3" required maxlength="500"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="sitePreviewUrl">رابط المعاينة المباشرة * (يبدأ بـ http)</label>
+                    <input type="url" id="sitePreviewUrl" required placeholder="https://example.com" />
+                </div>
+
+                <div class="form-group">
+                    <label for="siteCoverImage">رابط صورة الغلاف (اختياري)</label>
+                    <input type="url" id="siteCoverImage" placeholder="https://..." />
+                </div>
+
+                <div class="form-group" style="flex-direction: row; align-items: center; gap: 10px;">
+                    <input type="checkbox" id="sitePublished" checked style="width: auto;" />
+                    <label for="sitePublished" style="margin: 0;">منشور (يظهر للزوار)</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="saveWebsiteBtn"
+                    style="margin-top: var(--space-sm);">حفظ</button>
+                <div class="form-status" id="websiteStatus"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase/config.js"></script>
+    <script src="../js/supabase/auth.js"></script>
+    <script src="../js/supabase/database.js"></script>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/admin/websites.js"></script>
+</body>
+
+</html>

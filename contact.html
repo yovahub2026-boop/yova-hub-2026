@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="عندك سؤال أو حابب تستفسر عن تنفيذ موقع لمشروعك؟ ابعتلنا رسالتك، وإحنا هنتواصل معاك ونتكلم عن التفاصيل." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="[ضع الدومين هنا]/contact.html" />
+    <title>تواصل معنا | Yova-Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-container" aria-label="Yova-Hub - الصفحة الرئيسية">
+                <div class="logo-circle">Y</div>
+                <span class="logo-text">Yova-Hub</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة" aria-expanded="false"
+                aria-controls="mainNav"><span></span><span></span><span></span></button>
+            <nav class="main-nav" id="mainNav" aria-label="القائمة الرئيسية">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="pages/websites.html">معرض المواقع</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html" class="active">تواصل معنا</a></li>
+                    <li><a href="pages/websites.html" class="btn btn-primary btn-sm">تصفح المواقع</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="mainContent">
+        <section class="page-header">
+            <div class="container">
+                <h1>تواصل معنا</h1>
+                <p class="page-header-desc">عندك سؤال أو حابب تستفسر عن تنفيذ موقع لمشروعك؟ ابعتلنا رسالتك، وإحنا
+                    هنتواصل معاك ونتكلم عن التفاصيل.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container contact-layout">
+                <div class="contact-form-wrapper">
+                    <h2 class="section-title" style="text-align: start;">أرسل لنا رسالة</h2>
+                    <form id="contactForm" class="form" novalidate>
+                        <div class="form-group"><label for="contactName">الاسم <span
+                                    class="required">*</span></label><input type="text" id="contactName" name="name"
+                                required maxlength="100" autocomplete="name" /><span class="form-error"
+                                id="errorName"></span></div>
+                        <div class="form-group"><label for="contactPhone">رقم الهاتف <span
+                                    class="required">*</span></label><input type="tel" id="contactPhone" name="phone"
+                                required maxlength="20" autocomplete="tel" inputmode="tel" /><span class="form-error"
+                                id="errorPhone"></span></div>
+                        <div class="form-group"><label for="contactMessage">الرسالة <span
+                                    class="required">*</span></label><textarea id="contactMessage" name="message"
+                                rows="8" required maxlength="2000"></textarea><span class="form-error"
+                                id="errorMessage"></span></div>
+                        <button type="submit" class="btn btn-primary" id="contactSubmit">إرسال الرسالة</button>
+                        <div class="form-status" id="contactStatus" role="status" aria-live="polite"></div>
+                    </form>
+                </div>
+                <aside class="contact-info">
+                    <h2 class="section-title" style="text-align: start;">بيانات التواصل</h2>
+                    <ul class="contact-info-list">
+                        <li><strong>رقم الهاتف:</strong><span>01103441010</span></li>
+                        <li><strong>واتساب:</strong><a href="https://wa.me/201103441010" target="_blank"
+                                rel="noopener noreferrer">تواصل عبر واتساب</a></li>
+                        <li><strong>روابط التواصل الاجتماعي:</strong><span>لسه هبقى احط هنا الروابط</span></li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <div class="logo-container" style="margin-bottom: 10px;">
+                    <div class="logo-circle" style="border-color: #FFF; color: #FFF;">Y</div>
+                    <span class="logo-text" style="color: #FFF;">Yova-Hub</span>
+                </div>
+                <p>Yova-Hub بيساعدك تختار الموقع المناسب لمشروعك، وتحدد التعديلات اللي محتاجها قبل التنفيذ.</p>
+            </div>
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="pages/websites.html">معرض المواقع</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>تواصل معنا</h4>
+                <ul>
+                    <li>01103441010</li>
+                    <li><a href="https://wa.me/201103441010" target="_blank" rel="noopener noreferrer">واتساب</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>روابط قانونية</h4>
+                <ul>
+                    <li><a href="legal/privacy-policy.html">سياسة الخصوصية</a></li>
+                    <li><a href="legal/terms.html">الشروط والأحكام</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© <span id="currentYear"></span> Yova-Hub. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Supabase Config & Helpers -->
+    <script src="js/supabase/config.js"></script>
+    <script src="js/supabase/auth.js"></script>
+    <script src="js/supabase/database.js"></script>
+
+    <!-- Main Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

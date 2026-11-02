@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="تفاصيل الموقع | Yova-Hub" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="[ضع الدومين هنا]/pages/website-details.html" />
+    <title>تفاصيل الموقع | Yova-Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo-container" aria-label="Yova-Hub - الصفحة الرئيسية">
+                <div class="logo-circle">Y</div>
+                <span class="logo-text">Yova-Hub</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة" aria-expanded="false"
+                aria-controls="mainNav">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav" id="mainNav" aria-label="القائمة الرئيسية">
+                <ul>
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="websites.html" class="active">معرض المواقع</a></li>
+                    <li><a href="../about.html">من نحن</a></li>
+                    <li><a href="../contact.html">تواصل معنا</a></li>
+                    <li><a href="websites.html" class="btn btn-primary btn-sm">تصفح المواقع</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="mainContent">
+        <div class="container breadcrumb">
+            <a href="../index.html">الرئيسية</a>
+            <span>/</span>
+            <a href="websites.html">معرض المواقع</a>
+            <span>/</span>
+            <span id="breadcrumbName">[اسم الموقع]</span>
+        </div>
+
+        <div class="section loading-state" id="detailsLoading">
+            <div class="container">
+                <p>جارٍ تحميل تفاصيل الموقع...</p>
+            </div>
+        </div>
+
+        <div class="section" id="detailsError" hidden>
+            <div class="container text-center">
+                <h2 class="section-title">الموقع غير موجود</h2>
+                <p class="section-text">عذراً، الموقع الذي تبحث عنه غير متوفر أو تم حذفه.</p>
+                <p style="margin-top: var(--space-md);">
+                    <a href="websites.html" class="btn btn-primary">العودة لمعرض المواقع</a>
+                </p>
+            </div>
+        </div>
+
+        <section class="section" id="detailsContent" hidden>
+            <div class="container details-layout">
+                <div class="details-main">
+                    <h1 id="websiteName">[اسم الموقع]</h1>
+                    <p class="details-category">
+                        <span class="badge" id="websiteCategory">[التصنيف]</span>
+                    </p>
+                    <div class="details-cover">
+                        <span class="placeholder-box">[أضف صورة الغلاف هنا]</span>
+                    </div>
+                    <h2 class="section-title" style="text-align: start;">الوصف</h2>
+                    <p class="details-desc" id="websiteDesc">[اكتب وصف الموقع هنا]</p>
+                    <h2 class="section-title" style="text-align: start;">صور إضافية</h2>
+                    <div class="details-gallery" id="websiteGallery">
+                        <span class="placeholder-box">[أضف صورة إضافية هنا]</span>
+                        <span class="placeholder-box">[أضف صورة إضافية هنا]</span>
+                    </div>
+                </div>
+
+                <aside class="details-sidebar">
+                    <div class="sidebar-box">
+                        <h3>معاينة الموقع</h3>
+                        <p>يمكنك معاينة الموقع الفعلي قبل طلب التنفيذ.</p>
+                        <a href="#" id="previewLink" class="btn btn-outline" target="_blank"
+                            rel="noopener noreferrer">معاينة مباشرة</a>
+                    </div>
+                    <div class="sidebar-box">
+                        <h3>اطلب هذا الموقع</h3>
+                        <p>اطلب تنفيذ موقع مشابه، وسنتواصل معك للاتفاق على التفاصيل.</p>
+                        <button type="button" class="btn btn-primary" id="orderWebsiteBtn">اطلب هذا الموقع</button>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <div class="logo-container" style="margin-bottom: 10px;">
+                    <div class="logo-circle" style="border-color: #FFF; color: #FFF;">Y</div>
+                    <span class="logo-text" style="color: #FFF;">Yova-Hub</span>
+                </div>
+                <p>Yova-Hub بيساعدك تختار الموقع المناسب لمشروعك، وتحدد التعديلات اللي محتاجها قبل التنفيذ.</p>
+            </div>
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="websites.html">معرض المواقع</a></li>
+                    <li><a href="../about.html">من نحن</a></li>
+                    <li><a href="../contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>تواصل معنا</h4>
+                <ul>
+                    <li>01103441010</li>
+                    <li><a href="https://wa.me/201103441010" target="_blank" rel="noopener noreferrer">واتساب</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>روابط قانونية</h4>
+                <ul>
+                    <li><a href="../legal/privacy-policy.html">سياسة الخصوصية</a></li>
+                    <li><a href="../legal/terms.html">الشروط والأحكام</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© <span id="currentYear"></span> Yova-Hub. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Order Modal -->
+    <div class="modal" id="orderModal" hidden aria-hidden="true" role="dialog" aria-modal="true"
+        aria-labelledby="orderModalTitle">
+        <div class="modal-overlay" id="orderModalOverlay"></div>
+        <div class="modal-content">
+            <button type="button" class="modal-close" id="orderModalClose" aria-label="إغلاق">×</button>
+            <h2 id="orderModalTitle">طلب تنفيذ موقع</h2>
+            <p class="modal-subtitle">[سيتم ربط هذا النموذج بقاعدة البيانات في المرحلة الثالثة]</p>
+            <form id="orderForm" class="form" novalidate>
+                <input type="hidden" id="orderWebsiteId" name="websiteId" />
+                <input type="hidden" id="orderWebsiteName" name="websiteName" />
+                <div class="form-group">
+                    <label for="orderName">الاسم <span class="required">*</span></label>
+                    <input type="text" id="orderName" name="name" required maxlength="100" autocomplete="name" />
+                    <span class="form-error" id="orderErrorName"></span>
+                </div>
+                <div class="form-group">
+                    <label for="orderPhone">رقم الهاتف <span class="required">*</span></label>
+                    <input type="tel" id="orderPhone" name="phone" required maxlength="20" autocomplete="tel"
+                        inputmode="tel" />
+                    <span class="form-error" id="orderErrorPhone"></span>
+                </div>
+                <div class="form-group">
+                    <label for="orderBusiness">اسم النشاط التجاري <span class="required">*</span></label>
+                    <input type="text" id="orderBusiness" name="business" required maxlength="150" />
+                    <span class="form-error" id="orderErrorBusiness"></span>
+                </div>
+                <div class="form-group">
+                    <label for="orderPreferredContact">طريقة التواصل المفضلة <span class="required">*</span></label>
+                    <select id="orderPreferredContact" name="preferredContact" required>
+                        <option value="">اختر طريقة التواصل</option>
+                        <option value="phone">هاتف</option>
+                        <option value="whatsapp">واتساب</option>
+                        <option value="email">بريد إلكتروني</option>
+                    </select>
+                    <span class="form-error" id="orderErrorPreferredContact"></span>
+                </div>
+                <div class="form-group">
+                    <label for="orderDesc">وصف مختصر لاحتياجاتك <span class="required">*</span></label>
+                    <textarea id="orderDesc" name="description" rows="5" required maxlength="1500"></textarea>
+                    <span class="form-error" id="orderErrorDesc"></span>
+                </div>
+                <button type="submit" class="btn btn-primary" id="orderSubmit">إرسال الطلب</button>
+                <div class="form-status" id="orderStatus" role="status" aria-live="polite"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Supabase SDK (لازم يتحمل الأول) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Supabase Config & Helpers -->
+    <script src="../js/supabase/config.js"></script>
+    <script src="../js/supabase/auth.js"></script>
+    <script src="../js/supabase/database.js"></script>
+
+    <!-- Main Scripts -->
+    <script src="../js/utils.js"></script>
+    <script src="../js/website-details.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

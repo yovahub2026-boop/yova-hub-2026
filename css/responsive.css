@@ -1,0 +1,132 @@
+/* ===================================
+   Yova-Hub — Responsive Styles
+   =================================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-text h1 {
+        font-size: 1.9rem;
+    }
+
+    .contact-layout,
+    .details-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .details-sidebar {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .details-sidebar .sidebar-box {
+        flex: 1 1 260px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    :root {
+        --space-xl: 2.5rem;
+        --space-lg: 1.75rem;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        inset-inline: 0;
+        background-color: var(--color-white);
+        border-bottom: 1px solid var(--color-border);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.25s ease-in-out;
+    }
+
+    .main-nav.is-open {
+        max-height: 400px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        padding: var(--space-sm);
+        gap: var(--space-xs);
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 0.6rem 0.5rem;
+    }
+
+    .main-nav a.active::after {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 1.45rem;
+    }
+
+    .hero-text h1 {
+        font-size: 1.65rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .details-main h1 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content {
+        padding: var(--space-md);
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    :root {
+        --container-padding: 1rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .website-card-actions {
+        flex-direction: column;
+    }
+
+    .website-card-actions .btn {
+        width: 100%;
+    }
+
+    .details-sidebar {
+        flex-direction: column;
+    }
+}

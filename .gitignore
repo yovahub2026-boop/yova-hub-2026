@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Firebase
+.firebase/
+firebase-debug.log
+
+# Environment (احتياطي - مش مستخدم حالياً)
+.env
+.env.local
+
+# Node (احتياطي)
+node_modules/

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>الإعدادات | لوحة التحكم</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+</head>
+
+<body class="admin-body">
+
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <a href="index.html" class="logo">Yova-Hub</a>
+            <nav class="admin-nav" id="adminNav">
+                <a href="index.html">الرئيسية (Dashboard)</a>
+                <a href="websites.html">إدارة المواقع</a>
+                <a href="categories.html">إدارة التصنيفات</a>
+                <a href="orders.html">إدارة الطلبات</a>
+                <a href="messages.html">إدارة الرسائل</a>
+                <a href="settings.html" class="active">الإعدادات</a>
+                <a href="#" class="logout-btn" id="logoutBtn">تسجيل الخروج</a>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <div class="admin-header">
+                <h1>إعدادات الموقع</h1>
+            </div>
+
+            <div class="table-wrapper" style="padding: var(--space-md); max-width: 600px;">
+                <form id="settingsForm" class="form">
+                    <div class="form-group">
+                        <label for="siteTitle">اسم الموقع</label>
+                        <input type="text" id="siteTitle" maxlength="50" />
+                    </div>
+                    <div class="form-group">
+                        <label for="contactPhone">رقم الهاتف</label>
+                        <input type="text" id="contactPhone" maxlength="20" />
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">البريد الإلكتروني</label>
+                        <input type="email" id="contactEmail" maxlength="100" />
+                    </div>
+                    <div class="form-group">
+                        <label for="whatsappLink">رابط واتساب</label>
+                        <input type="url" id="whatsappLink" placeholder="https://wa.me/..." />
+                    </div>
+                    <div class="form-group">
+                        <label for="socialLinks">روابط التواصل الاجتماعي (مفصولة بفاصلة)</label>
+                        <input type="text" id="socialLinks" placeholder="facebook.com/..., twitter.com/..." />
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="saveSettingsBtn">حفظ الإعدادات</button>
+                    <div class="form-status" id="settingsStatus"></div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase/config.js"></script>
+    <script src="../js/supabase/auth.js"></script>
+    <script src="../js/supabase/database.js"></script>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/admin/settings.js"></script>
+</body>
+
+</html>

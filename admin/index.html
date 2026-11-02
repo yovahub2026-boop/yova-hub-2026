@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>لوحة التحكم | Yova-Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+</head>
+
+<body class="admin-body">
+
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <a href="index.html" class="logo">Yova-Hub</a>
+            <nav class="admin-nav" id="adminNav">
+                <a href="index.html" class="active">الرئيسية (Dashboard)</a>
+                <a href="websites.html">إدارة المواقع</a>
+                <a href="categories.html">إدارة التصنيفات</a>
+                <a href="orders.html">إدارة الطلبات</a>
+                <a href="messages.html">إدارة الرسائل</a>
+                <a href="settings.html">الإعدادات</a>
+                <a href="#" class="logout-btn" id="logoutBtn">تسجيل الخروج</a>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <div class="admin-header">
+                <h1>لوحة التحكم</h1>
+                <span class="user-email" id="adminEmail">جاري التحميل...</span>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>إجمالي المواقع</h3>
+                    <div class="stat-value" id="statWebsites">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>إجمالي الطلبات</h3>
+                    <div class="stat-value" id="statOrders">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>طلبات جديدة</h3>
+                    <div class="stat-value" id="statNewOrders">0</div>
+                </div>
+            </div>
+
+            <h2 style="margin-bottom: var(--space-sm); color: var(--color-primary);">آخر الطلبات</h2>
+            <div class="table-wrapper">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>اسم العميل</th>
+                            <th>رقم الهاتف</th>
+                            <th>الموقع المطلوب</th>
+                            <th>الحالة</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentOrdersTable">
+                        <tr>
+                            <td colspan="4" style="text-align:center;">جاري التحميل...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase/config.js"></script>
+    <script src="../js/supabase/auth.js"></script>
+    <script src="../js/supabase/database.js"></script>
+
+    <!-- Scripts -->
+    <script src="../js/utils.js"></script>
+    <script src="../js/admin/dashboard.js"></script>
+</body>
+
+</html>
